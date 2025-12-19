@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+    body {
+        margin: 0;
+        padding: 20px;
+        background-color: transparent;
+    }
+
+    .academic-card {
+        background: #ffffff;
+        border-left: 5px solid #5d4037; /* 深木色邊框，增加學術感 */
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        font-family: 'Noto Serif TC', serif;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .header-info {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .name-zh {
+        font-size: 28px;
+        color: #2c3e50;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+
+    .name-en {
+        font-size: 18px;
+        color: #7f8c8d;
+        margin: 5px 0;
+    }
+
+    .title {
+        display: inline-block;
+        background: #f4f1ea;
+        color: #5d4037;
+        padding: 4px 12px;
+        font-size: 14px;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+
+    .poem-section {
+        background-color: #fdfdfd;
+        padding: 20px;
+        border: 1px dashed #d1d1d1;
+        position: relative;
+    }
+
+    .poem-title {
+        color: #8d6e63;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .poem-content {
+        color: #333;
+        line-height: 1.8;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .poem-content span {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* 裝飾符號 */
+    .poem-section::before {
+        content: "“";
+        font-size: 50px;
+        color: #eee;
+        position: absolute;
+        top: 0;
+        left: 10px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="academic-card">
+    <div class="header-info">
+        <h1 class="name-zh">吳瑞文</h1>
+        <div class="name-en">Ryan Rui-wen Wu</div>
+        <span class="title">研究員 / 教授 · Research Fellow / Professor</span>
+    </div>
+
+    <div class="poem-section">
+        <div class="poem-title">《張九齡 · 登郡城南樓》</div>
+        <div class="poem-content">
+            <span>閉閣幸無事，登樓聊永日。</span>
+            <span>雲霞千里開，洲渚萬形出。</span>
+            <span>澹澹澄江漫，飛飛度鳥疾。</span>
+            <span>邑人半艫艦，津樹多楓橘。</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
