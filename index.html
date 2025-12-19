@@ -1,115 +1,148 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
 <head>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
-
-    body {
-        margin: 0;
-        padding: 20px;
-        background-color: transparent;
-    }
-
-    .academic-card {
-        background: #ffffff;
-        border-left: 5px solid #5d4037; /* 深木色邊框，增加學術感 */
-        padding: 30px;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        font-family: 'Noto Serif TC', serif;
-        max-width: 800px;
-        margin: auto;
-    }
-
-    .header-info {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 15px;
-        margin-bottom: 20px;
-    }
-
-    .name-zh {
-        font-size: 28px;
-        color: #2c3e50;
-        font-weight: 700;
-        margin: 0;
-        letter-spacing: 2px;
-    }
-
-    .name-en {
-        font-size: 18px;
-        color: #7f8c8d;
-        margin: 5px 0;
-    }
-
-    .title {
-        display: inline-block;
-        background: #f4f1ea;
-        color: #5d4037;
-        padding: 4px 12px;
-        font-size: 14px;
-        border-radius: 4px;
-        margin-top: 10px;
-    }
-
-    .poem-section {
-        background-color: #fdfdfd;
-        padding: 20px;
-        border: 1px dashed #d1d1d1;
-        position: relative;
-    }
-
-    .poem-title {
-        color: #8d6e63;
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .poem-content {
-        color: #333;
-        line-height: 1.8;
-        font-size: 16px;
-        text-align: center;
-        letter-spacing: 1px;
-    }
-
-    .poem-content span {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    /* 裝飾符號 */
-    .poem-section::before {
-        content: "“";
-        font-size: 50px;
-        color: #eee;
-        position: absolute;
-        top: 0;
-        left: 10px;
-    }
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>吳瑞文 | RYAN WU - 個人學術網頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        .serif-tc { font-family: 'Noto Serif TC', serif; }
+        .serif-en { font-family: 'Times New Roman', serif; }
+        .nav-link:hover { color: #92400e; }
+    </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
 
-<div class="academic-card">
-    <div class="header-info">
-        <h1 class="name-zh">吳瑞文</h1>
-        <div class="name-en">Ryan Rui-wen Wu</div>
-        <span class="title">研究員 / 教授 · Research Fellow / Professor</span>
-    </div>
-
-    <div class="poem-section">
-        <div class="poem-title">《張九齡 · 登郡城南樓》</div>
-        <div class="poem-content">
-            <span>閉閣幸無事，登樓聊永日。</span>
-            <span>雲霞千里開，洲渚萬形出。</span>
-            <span>澹澹澄江漫，飛飛度鳥疾。</span>
-            <span>邑人半艫艦，津樹多楓橘。</span>
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="text-xl font-bold tracking-tighter serif-en">RYAN WU</div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link transition">關於</a>
+                <a href="#research" class="nav-link transition">研究領域</a>
+                <a href="#publications" class="nav-link transition">學術著作</a>
+                <a href="#contact" class="nav-link transition">聯繫</a>
+            </div>
         </div>
-    </div>
-</div>
+    </nav>
+
+    <header class="pt-32 pb-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 serif-tc">吳瑞文</h1>
+                <p class="text-xl text-amber-800 font-medium mb-6 serif-tc">中央研究院 語言學研究所 研究員</p>
+                <div class="h-1 w-20 bg-amber-800 mx-auto md:mx-0 mb-8"></div>
+                <p class="text-slate-600 max-w-lg mx-auto md:mx-0">
+                    專研歷史音韻學、方言地理學及原始漢語擬測。致力於透過歷史比較法與田野調查，重建漢語方言的演變歷程。
+                </p>
+            </div>
+            <div class="w-64 h-80 bg-slate-200 rounded-sm shadow-2xl overflow-hidden border-8 border-white relative group">
+                <img src="profile.jpg" alt="吳瑞文" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                <div class="absolute inset-0 flex items-center justify-center text-slate-400 italic text-sm p-4 text-center">
+                    [ 放置個人照片 <br> profile.jpg ]
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="research" class="py-20 bg-slate-900 text-white px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-16 text-center">研究專長 <span class="serif-en italic ml-2 text-slate-500 font-light">Research Interests</span></h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="border-t border-slate-700 pt-6">
+                    <span class="text-amber-500 serif-en text-lg">01.</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4">歷史音韻學</h3>
+                    <p class="text-slate-400 text-sm leading-loose">探討中古音至現代方言的演變規律，特別聚焦於咸、山、梗、蟹等攝的層次分析。</p>
+                </div>
+                <div class="border-t border-slate-700 pt-6">
+                    <span class="text-amber-500 serif-en text-lg">02.</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4">漢語方言學</h3>
+                    <p class="text-slate-400 text-sm leading-loose">閩語與湘語的歷史比較研究，及原始漢語音韻系統的擬測與檢證。</p>
+                </div>
+                <div class="border-t border-slate-700 pt-6">
+                    <span class="text-amber-500 serif-en text-lg">03.</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4">方言地理學</h3>
+                    <p class="text-slate-400 text-sm leading-loose">結合地理分佈與歷史文獻，研究語音異化、重疊構詞與歷史語法的互動。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 flex items-center">
+                期刊論文 <span class="serif-en italic ml-4 text-xl text-slate-400 font-light">Selected Journal Articles</span>
+            </h2>
+            
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l-2 border-amber-800">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-amber-800 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-amber-800 mb-6 serif-en">2025</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-amber-800 transition">〈唇音異化與重疊構詞的互動：論臺灣閩南語kui5 saŋ1 saŋ1、put7 tap7 put7 tshit7和put7 tian1 put7 kai5的本字〉</h4>
+                            <p class="text-slate-600 mb-2 font-light">《臺灣文學研究雧刊》，34：1-34。（已接受）。</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-[10px] px-2 py-0.5 border border-amber-200 text-amber-700 rounded bg-amber-50 font-bold">THCI Core</span>
+                                <span class="text-[10px] px-2 py-0.5 border border-slate-200 text-slate-500 rounded bg-slate-50">第一作者、通訊作者</span>
+                            </div>
+                        </div>
+
+                        <div class="group pt-6 border-t border-slate-50">
+                            <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-amber-800 transition">〈從音韻及詞族的觀點論閩南語tsĩ3的本字〉</h4>
+                            <p class="text-slate-600 mb-2 font-light">《臺灣語文研究》，20.1：1-34。</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-[10px] px-2 py-0.5 border border-amber-200 text-amber-700 rounded bg-amber-50 font-bold">THCI Core</span>
+                                <span class="text-[10px] px-2 py-0.5 border border-slate-200 text-slate-500 rounded bg-slate-50">第一作者、通訊作者</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-slate-200">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-200 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-slate-400 mb-6 serif-en">2024</h3>
+                    <div class="group">
+                        <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-amber-800 transition">〈論現代湘語精、知、章、莊系聲母的存古與創新—兼評吳湘一體說〉</h4>
+                        <p class="text-slate-600 mb-2 font-light">《中國語言學集刊》，17.1/2：97-128。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] px-2 py-0.5 border border-slate-200 text-slate-500 rounded bg-slate-50">第一作者、通訊作者</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-slate-200">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-200 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-slate-400 mb-6 serif-en">2023</h3>
+                    <div class="group">
+                        <h4 class="text-lg font-bold text-slate-800 mb-1 group-hover:text-amber-800 transition">〈論現代湘語止攝開口韻的存古與創新〉</h4>
+                        <p class="text-slate-600 mb-2 font-light">《文與哲》，第四十三期：303-338。</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] px-2 py-0.5 border border-amber-200 text-amber-700 rounded bg-amber-50 font-bold">THCI Core</span>
+                            <span class="text-[10px] px-2 py-0.5 border border-green-200 text-green-700 rounded bg-green-50">科技部：108-2410-H-001-045-MY2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-slate-100 text-center">
+                <p class="text-slate-400 text-sm mb-6 font-light italic text-center">...其餘著作清單請見完整履歷</p>
+                <a href="#" class="inline-flex items-center gap-2 px-8 py-3 bg-slate-800 text-white text-sm hover:bg-amber-800 transition duration-300">
+                    <span>下載完整著作清單 (PDF)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-12 bg-slate-50 border-t border-slate-100 px-6 text-center text-slate-500 text-sm">
+        <div class="max-w-6xl mx-auto">
+            <p class="mb-2 serif-tc text-slate-800">中央研究院 語言學研究所</p>
+            <p class="mb-8 font-light">台北市南港區 11529 研究院路二段 128 號</p>
+            <p class="serif-en">© 2025 RYAN WU. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
